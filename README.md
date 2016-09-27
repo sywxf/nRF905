@@ -59,19 +59,4 @@ typedef enum
 nRf905_setFrequency(433200000UL,nRF905_band_t);
 
 
-// \enum nRF905_auto_retran_t 
-// \brief Constantly retransmit payload while in transmit mode.
-//
-// Can be useful in areas with lots of interference, but you'll need to make sure you can differentiate between re-transmitted packets and new packets (like an ID number).
-//
-// Other transmissions will be blocked if collision avoidance is enabled.
-//
-typedef enum
-{
-	NRF905_AUTO_RETRAN_DISABLE = 0x00,	/**< Disable auto re-transmit */
-	NRF905_AUTO_RETRAN_ENABLE = 0x20	/**< Enable auto re-transmit */
-} nRF905_auto_retran_t;
 
-// Set auto retransmit
-
-nRF905_setAutoRetransmit(nRF905_auto_retran_t);
